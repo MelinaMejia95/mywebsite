@@ -1,0 +1,7 @@
+# files
+src/serviceWorker.js
+
+# folders
+/scripts
+/public
+/config
