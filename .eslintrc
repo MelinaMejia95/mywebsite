@@ -1,0 +1,24 @@
+{
+  "globals": {
+    "window": "writable",
+    "document": "writable"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended"],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "default-case": "error",
+    "indent": ["error", 2],
+    "no-console": "error",
+    "no-empty": "error",
+    "no-empty-function": "error",
+    "no-unused-vars": "off"
+  }
+}
