@@ -1,7 +1,8 @@
 {
   "globals": {
     "window": "writable",
-    "document": "writable"
+    "document": "writable",
+    "require": "writable"
   },
   "parser": "babel-eslint",
   "parserOptions": {
