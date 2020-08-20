@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 1rem;
+
+  img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  }
+
+  nav {
+    width: 60%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+
+      li {
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
