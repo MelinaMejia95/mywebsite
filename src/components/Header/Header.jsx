@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Header.scss';
+import { Dropdown } from '../Dropdown';
 import photo from '../../assets/images/me.jpg';
 
 const Header = () => {
@@ -19,6 +20,9 @@ const Header = () => {
           </li>
           <li>
             <a href="http:/google.com">Art</a>
+          </li>
+          <li>
+            <Dropdown />
           </li>
         </ul>
       </nav>
