@@ -1,0 +1,22 @@
+.card-container {
+  width: 80%;
+  height: 18rem;
+  position: relative;
+
+  .title-container {
+    height: 1rem;
+  }
+
+  .image-container {
+    height: 13rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .link-container {
+    height: 1rem;
+  }
+}
