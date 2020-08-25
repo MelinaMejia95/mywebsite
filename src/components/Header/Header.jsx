@@ -1,41 +1,42 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import './Header.scss';
-import { Dropdown } from '../Dropdown';
-import photo from '../../assets/images/me.jpg';
+import './Header.scss'
+import { Dropdown } from '../Dropdown'
+import photo from '../../assets/images/me.jpg'
+import { navItemsPreset } from '../../constants/navItemsConstants'
 
 const Header = () => {
-  const [mobileNavVisibility, setMobileNavVisibility] = useState(false);
+  const [mobileNavVisibility, setMobileNavVisibility] = useState(false)
 
   const toogleMobileNavVisibility = () => {
-    setMobileNavVisibility(!mobileNavVisibility);
+    setMobileNavVisibility(!mobileNavVisibility)
   }
 
   return (
     <>
-      {mobileNavVisibility && <div className='backdrop' onClick={toogleMobileNavVisibility}></div>}
+      {mobileNavVisibility && (
+        <div className='backdrop' onClick={toogleMobileNavVisibility}></div>
+      )}
       <div className='header-container'>
         <div className='left-content'>
-          <button class="toggle-button" onClick={toogleMobileNavVisibility}>
-            <span class="toggle-button__bar"></span>
-            <span class="toggle-button__bar"></span>
-            <span class="toggle-button__bar"></span>
+          <button class='toggle-button' onClick={toogleMobileNavVisibility}>
+            <span class='toggle-button__bar'></span>
+            <span class='toggle-button__bar'></span>
+            <span class='toggle-button__bar'></span>
           </button>
           <img src={photo} alt="Melina's photo" />
         </div>
         <div className='img-container'></div>
         <nav className='main-nav'>
           <ul>
-            <li>
-              <Link to='/'>About</Link>
-            </li>
-            <li>
-              <Link to='/talks'>Talks</Link>
-            </li>
-            <li>
-              <Link to='/art'>Art</Link>
-            </li>
+            {navItemsPreset.map((item) => {
+              return (
+                <li>
+                  <Link to={item.link}>{item.description}</Link>
+                </li>
+              )
+            })}
             <li>
               <Dropdown />
             </li>
@@ -43,17 +44,17 @@ const Header = () => {
         </nav>
       </div>
       <nav className={`mobile-nav ${mobileNavVisibility ? 'open' : ''}`}>
-        <ul className="mobile-nav__items">
-          <li className="mobile-nav__item">
-            <Link to='/' onClick={toogleMobileNavVisibility}>About</Link>
-          </li>
-          <li className="mobile-nav__item">
-            <Link to='/talks' onClick={toogleMobileNavVisibility}>Talks</Link>
-          </li>
-          <li className="mobile-nav__item">
-            <Link to='/art' onClick={toogleMobileNavVisibility}>Art</Link>
-          </li>
-          <li className="mobile-nav__item">
+        <ul className='mobile-nav__items'>
+          {navItemsPreset.map((item) => {
+            return (
+              <li className='mobile-nav__item'>
+                <Link to={item.link} onClick={toogleMobileNavVisibility}>
+                  {item.description}
+                </Link>
+              </li>
+            )
+          })}
+          <li className='mobile-nav__item'>
             <Dropdown />
           </li>
         </ul>
@@ -62,4 +63,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header
