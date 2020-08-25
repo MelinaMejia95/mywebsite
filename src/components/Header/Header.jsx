@@ -16,9 +16,14 @@ const Header = () => {
     <>
       {mobileNavVisibility && <div className='backdrop' onClick={toogleMobileNavVisibility}></div>}
       <div className='header-container'>
-        <button onClick={toogleMobileNavVisibility}>
+        <div className='left-content'>
+          <button class="toggle-button" onClick={toogleMobileNavVisibility}>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+          </button>
           <img src={photo} alt="Melina's photo" />
-        </button>
+        </div>
         <div className='img-container'></div>
         <nav className='main-nav'>
           <ul>

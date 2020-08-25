@@ -15,13 +15,36 @@
   height: 4rem;
   padding: 1rem;
 
-  button {
-    border: none;
-    background-color: transparent;
+  .left-content {
+    display: flex;
 
+    .toggle-button {
+      width: 3rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: middle;
+      margin-right: 8px;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      .toggle-button__bar {
+        width: 100%;
+        height: 4px;
+        background: black;
+        display: block;
+        margin: 0.6rem 0;
+        border-radius: 3px;
+      }
+    }
+  
     img {
-      width: 72px;
-      height: 72px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
     }
   }
