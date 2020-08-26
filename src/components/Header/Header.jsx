@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import './Header.scss'
-import { Dropdown } from '../Dropdown'
-import photo from '../../assets/images/me.jpg'
-import { navItemsPreset } from '../../constants/navItemsConstants'
+import './Header.scss';
+import { Dropdown } from '../Dropdown';
+import photo from '../../assets/images/me.jpg';
+import { navItemsPreset } from '../../constants/navItemsConstants';
 
 const Header = () => {
   const [mobileNavVisibility, setMobileNavVisibility] = useState(false)
@@ -20,19 +20,19 @@ const Header = () => {
       )}
       <div className='header-container'>
         <div className='left-content'>
-          <button class='toggle-button' onClick={toogleMobileNavVisibility}>
-            <span class='toggle-button__bar'></span>
-            <span class='toggle-button__bar'></span>
-            <span class='toggle-button__bar'></span>
+          <button className='toggle-button' onClick={toogleMobileNavVisibility}>
+            <span className='toggle-button__bar'></span>
+            <span className='toggle-button__bar'></span>
+            <span className='toggle-button__bar'></span>
           </button>
           <img src={photo} alt="Melina's photo" />
         </div>
         <div className='img-container'></div>
         <nav className='main-nav'>
           <ul>
-            {navItemsPreset.map((item) => {
+            {navItemsPreset.map((item, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link to={item.link}>{item.description}</Link>
                 </li>
               )
@@ -45,9 +45,9 @@ const Header = () => {
       </div>
       <nav className={`mobile-nav ${mobileNavVisibility ? 'open' : ''}`}>
         <ul className='mobile-nav__items'>
-          {navItemsPreset.map((item) => {
+          {navItemsPreset.map((item, index) => {
             return (
-              <li className='mobile-nav__item'>
+              <li className='mobile-nav__item' key={index}>
                 <Link to={item.link} onClick={toogleMobileNavVisibility}>
                   {item.description}
                 </Link>
@@ -61,6 +61,6 @@ const Header = () => {
       </nav>
     </>
   )
-}
+};
 
-export default Header
+export default Header;

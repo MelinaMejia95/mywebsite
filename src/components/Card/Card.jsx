@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './Card.scss'
-import photo from '../../assets/images/me.jpg'
+import './Card.scss';
 
 const Card = ({
   year,
@@ -28,6 +27,6 @@ const Card = ({
       </div>
     </div>
   )
-}
+};
 
-export default Card
+export default Card;
