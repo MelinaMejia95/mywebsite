@@ -12,14 +12,14 @@ const Talks = () => {
     axios
       .get('https://nonprod-website.firebaseio.com/talks.json')
       .then((response) => {
-        transformTalks(response.data)
+        transformTalks(response.data);
         setTalks(talksList);
-      })
+      });
   }, [])
 
   const transformTalks = (talksPreset) => {
     Object.keys(talksPreset).forEach((talkKey) => {
-      return talksList.push(talksPreset[talkKey])
+      return talksList.push(talksPreset[talkKey]);
     });
   }
 

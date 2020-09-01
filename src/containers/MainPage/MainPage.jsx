@@ -24,9 +24,10 @@ const MainPage = () => {
       <section className='skills-container'>
         <h3>My skills</h3>
         <div className='spinners-container'>
-          {skillsPreset.map((skill) => {
+          {skillsPreset.map((skill, index) => {
             return (
               <PercentageCircle
+                key={index}
                 title={skill.title}
                 percentage={skill.percentage}
               />
