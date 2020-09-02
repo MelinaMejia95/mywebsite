@@ -1,5 +1,12 @@
+@import '../../scss/variables';
+
 .talks-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  h1 {
+    font-family: $rubik;
+    color: $dark-red-1;
+  }
 }

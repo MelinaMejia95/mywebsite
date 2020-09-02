@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .flex-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -35,7 +37,7 @@
 }
 
 .circular-chart.orange .circle {
-  stroke: #ff9f00;
+  stroke: $soft-dark-red-1;
 }
 
 .circular-chart.green .circle {
@@ -47,7 +49,7 @@
 }
 
 .percentage {
-  fill: #666;
+  fill: $light-grey-1;
   font-family: sans-serif;
   font-size: 0.5em;
   text-anchor: middle;

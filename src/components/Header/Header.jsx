@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Header.scss';
 import { Dropdown } from '../Dropdown';
-import photo from '../../assets/images/me.jpg';
+import photo from '../../assets/images/me.png';
 import { navItemsPreset } from '../../constants/navItemsConstants';
 
 const Header = () => {

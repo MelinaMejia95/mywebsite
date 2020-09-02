@@ -24,7 +24,7 @@ export const skillsPreset = [
     percentage: '60'
   },
   {
-    title: 'Git',
-    percentage: '60'
+    title: 'Web Accessibility',
+    percentage: '50'
   }
 ];

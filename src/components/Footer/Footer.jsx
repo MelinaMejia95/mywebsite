@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <label>Made with love</label>
-      <br />
-      <label>© 2020</label>
+      <label>© 2020 Melina Mejía</label>
     </footer>
   )
 };

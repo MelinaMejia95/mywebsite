@@ -2,19 +2,18 @@ import React from 'react';
 
 import { PercentageCircle } from '../../components/PercentageCircle';
 import { skillsPreset } from '../../constants/skillsContants';
+import photo from '../../assets/images/me.png';
 import './MainPage.scss';
 
 const MainPage = () => {
   return (
     <div className='maingpage-container'>
       <section className='introduction-container'>
-        <div>
-          <h1 htmlFor=''>I'm Melina!</h1>
-          <h3>Nice to meet you</h3>
-        </div>
+        <h1>I'm Melina!</h1>
+        <h3>Nice to meet you</h3>
       </section>
       <section className='presentation-container'>
-        <h3>Hello</h3>
+        <img src={photo} alt="Melina's photo" />
         <p>
           I'm a front-end developer from Medellín-Colombia 🇨🇴 <br />I have a
           huge passion about programming, web accesibility, drawing and learning

@@ -1,12 +1,27 @@
+@import '../../scss/variables';
+
 .maingpage-container {
   padding: 0 1rem;
+  font-family: $rubik;
+  
+  h3 {
+    color: $light-red-1;
+  }
 
   .introduction-container {
     display: flex;
     flex-direction: column;
   }
 
+  .presentation-container {
+
+    img {
+      width: 200px;
+    }
+  }
+
   .skills-container {
+    margin-top: 2.5rem;
 
     .spinners-container {
       display: flex;
