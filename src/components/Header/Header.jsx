@@ -20,11 +20,12 @@ const Header = () => {
       )}
       <div className='header-container'>
         <div className='left-content'>
-          <button className='toggle-button' onClick={toogleMobileNavVisibility}>
-            <span className='toggle-button__bar'></span>
-            <span className='toggle-button__bar'></span>
-            <span className='toggle-button__bar'></span>
-          </button>
+          <div className='toggle-button' onClick={toogleMobileNavVisibility}>
+            <input type="checkbox" checked={mobileNavVisibility} />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <img src={photo} alt="Melina's photo" />
         </div>
         <div className='img-container'></div>
