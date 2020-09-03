@@ -28,5 +28,37 @@
       flex-wrap: wrap;
     }
   }
+
+  .languages-container {
+    
+    .languages-card {
+      display: flex;
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 8rem;
+      }
+
+      .language-description {
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+          margin: 0 0 0.5rem;
+        }
+      }
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    #english {
+      float: right;
+    }
+  }
   
 }
