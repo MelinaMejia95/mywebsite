@@ -2,14 +2,16 @@ import React from 'react';
 
 import { PercentageCircle } from '../../components/PercentageCircle';
 import { skillsPreset } from '../../constants/skillsContants';
-import photo from '../../assets/images/me.png';
+import { languagesPreset } from '../../constants/languagesConstants';
+import photo from '../../assets/images/me.PNG';
+import message from '../../assets/images/message.PNG';
 import './MainPage.scss';
 
 const MainPage = () => {
   return (
     <div className='maingpage-container'>
       <section className='introduction-container'>
-        <h1>I'm Melina!</h1>
+        <img src={message} alt="I'm Melina" />
         <h3>Nice to meet you</h3>
       </section>
       <section className='presentation-container'>
@@ -39,28 +41,20 @@ const MainPage = () => {
         <p>
           Those are the languages I speak and/or I'm learning
         </p>
-        <div className='languages-card'>
-          <img src={photo} alt='Melina first language'/>
-          <div className='language-description'>
-            <h4>Spanish</h4>
-            <label>Native</label>
-          </div>
-        </div>
-        <div className='languages-card' id='english'>
-          <div className='language-description'>
-            <h4>English</h4>
-            <label>Level C1</label>
-          </div>
-          <img src={photo} alt='Melina first language'/>
-        </div>
-        <div class="clearfix"></div>
-        <div className='languages-card'>
-          <img src={photo} alt='Melina first language'/>
-          <div className='language-description'>
-            <h4>Korean</h4>
-            <label>Learning!</label>
-          </div>
-        </div>
+        {languagesPreset.map((language, index) => {
+          return (
+            <>
+              <div className='languages-card' id={language.title}>
+                <img src={language.photo} alt={language.photoAlt}/>
+                <div className='language-description'>
+                  <h4>{language.title}</h4>
+                  <label>{language.level}</label>
+                </div>
+              </div>
+              {language.title === 'english' && <div class="clearfix"></div>}
+            </>
+          )
+        })}
       </section>
     </div>
   )

@@ -11,6 +11,10 @@
   .introduction-container {
     display: flex;
     flex-direction: column;
+
+    img {
+      height: 9rem;
+    }
   }
 
   .presentation-container {
@@ -47,8 +51,13 @@
         justify-content: center;
 
         h4 {
+          text-transform: capitalize;
           margin: 0 0 0.5rem;
         }
+      }
+
+      &#english {
+        flex-direction: row-reverse;
       }
     }
 
