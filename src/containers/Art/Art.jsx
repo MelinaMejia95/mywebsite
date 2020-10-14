@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import './Art.scss'
+import './Art.scss';
 
 const Art = () => {
   let imgUrlsList = [];
@@ -36,6 +36,6 @@ const Art = () => {
       </div>
     </>
   )
-}
+};
 
 export default Art;

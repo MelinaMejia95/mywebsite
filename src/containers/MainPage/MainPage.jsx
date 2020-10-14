@@ -11,7 +11,7 @@ const MainPage = () => {
   return (
     <div className='maingpage-container'>
       <section className='introduction-container'>
-        <img src={message} alt="I'm Melina" />
+        <h1>I'm Melina</h1>
         <h3>Nice to meet you</h3>
       </section>
       <section className='presentation-container'>
@@ -49,6 +49,13 @@ const MainPage = () => {
                 <div className='language-description'>
                   <h4>{language.title}</h4>
                   <label>{language.level}</label>
+                </div>
+                <div className='dots-container'>
+                  <span className='little-dot'></span>
+                  <span className='little-dot'></span>
+                  <span className='little-dot'></span>
+                  <span className='little-dot'></span>
+                  <span className='little-dot'></span>
                 </div>
               </div>
               {language.title === 'english' && <div class="clearfix"></div>}

@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { Card } from '../Card';
+import './SectionList.scss'
 
 const SectionList = ({
   title,
   items
 }) => {
   return (
-    <div>
+    <div className='section-list-container'>
       <h2>{title}</h2>
       {items.map((item, index) => {
         return (

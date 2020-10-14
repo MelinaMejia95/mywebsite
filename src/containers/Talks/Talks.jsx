@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import './Talks.scss';
-import { Card } from '../../components/Card';
 import { SectionList } from '../../components/SectionList';
 
 const Talks = () => {
