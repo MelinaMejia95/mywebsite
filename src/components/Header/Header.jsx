@@ -8,10 +8,11 @@ import { navItemsPreset } from '../../constants/navItemsConstants';
 
 const Header = () => {
   const [mobileNavVisibility, setMobileNavVisibility] = useState(false)
+  const [theme, setTheme] = useState(false)
 
-  const toogleMobileNavVisibility = () => {
-    setMobileNavVisibility(!mobileNavVisibility)
-  }
+  const toogleMobileNavVisibility = () => setMobileNavVisibility(!mobileNavVisibility)
+  
+  const toogleTheme = () => setTheme(!theme)
 
   return (
     <>
@@ -28,7 +29,11 @@ const Header = () => {
           </div>
           <img src={photo} alt="Melina's photo" />
         </div>
-        <div className='img-container'></div>
+        <div className='right-content'>
+          <button onClick={toogleTheme}>
+            {!theme ? 'Dark mode' : 'Light mode'}
+          </button> 
+        </div>
         <nav className='main-nav'>
           <ul>
             {navItemsPreset.map((item, index) => {
