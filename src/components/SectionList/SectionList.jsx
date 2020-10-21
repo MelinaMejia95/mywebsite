@@ -14,11 +14,9 @@ const SectionList = ({
         return (
           <Card
             key={index}
-            year={item.year}
             title={item.title}
             photo={item.imageUrl}
             link={item.link}
-            slides={item.slides}
           />
         )
       })}

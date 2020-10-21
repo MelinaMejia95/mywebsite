@@ -29,13 +29,8 @@
     padding: 1rem;
     color: white;
 
-    .links-container {
-      display: flex;
-      justify-content: space-around;
-
-      a {
-        color: $soft-dark-red-2;
-      }
+    a {
+      color: white;
     }
 
   }

@@ -3,11 +3,9 @@ import React from 'react';
 import './Card.scss';
 
 const Card = ({
-  year,
   title,
   photo,
-  link,
-  slides
+  link
 }) => {
   return (
     <div className='card-container'>
@@ -15,16 +13,7 @@ const Card = ({
         <img src={photo} alt="Melina's photo" />
       </div>
       <div className='description-container'>
-        <label>{year} - {title}</label>
-        <hr/>
-        <div className='links-container'>
-          {link &&
-            <a href={link}>Video</a>
-          }
-          {slides &&
-            <a href={slides}>Slides</a>
-          }
-        </div>
+        <a href={link}>{title}</a>
       </div>
     </div>
   )

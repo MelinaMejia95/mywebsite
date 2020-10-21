@@ -1,30 +1,38 @@
+import html from '../assets/images/html.png';
+import css from '../assets/images/css.png';
+import javascript from '../assets/images/javascript.png';
+import react from '../assets/images/react.png';
+import reactNative from '../assets/images/reactNative.png';
+import git from '../assets/images/git.png';
+import accessibility from '../assets/images/accessibility.png';
+
 export const skillsPreset = [
   {
     title: 'HTML',
-    percentage: '80'
+    photo: html
   },
   {
     title: 'CSS',
-    percentage: '80'
+    photo: css
   },
   {
     title: 'JavaScript',
-    percentage: '65'
+    photo: javascript
   },
   {
     title: 'React',
-    percentage: '70'
+    photo: react
   },
   {
     title: 'React Native',
-    percentage: '40'
+    photo: reactNative
   },
   {
     title: 'Git',
-    percentage: '60'
+    photo: git
   },
   {
     title: 'Web Accessibility',
-    percentage: '50'
+    photo: accessibility
   }
 ];

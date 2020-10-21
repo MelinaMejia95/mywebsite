@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { PercentageCircle } from '../../components/PercentageCircle';
 import { skillsPreset } from '../../constants/skillsContants';
 import { languagesPreset } from '../../constants/languagesConstants';
 import photo from '../../assets/images/me.PNG';
-import message from '../../assets/images/message.PNG';
 import './MainPage.scss';
 
 const MainPage = () => {
@@ -24,14 +22,15 @@ const MainPage = () => {
       </section>
       <section className='skills-container'>
         <h3>My skills</h3>
-        <div className='spinners-container'>
+        <div className='skills-content'>
           {skillsPreset.map((skill, index) => {
             return (
-              <PercentageCircle
-                key={index}
-                title={skill.title}
-                percentage={skill.percentage}
-              />
+              <div className='skill-cards-container' key={index}>
+                <span>{skill.title}</span>
+                <div className='skill-card'>
+                  <img src={skill.photo} alt={skill.title}/>
+                </div>
+              </div>
             )
           })}
         </div>
