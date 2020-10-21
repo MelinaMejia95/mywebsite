@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-import './Art.scss';
+import styles from './Art.module.scss'
 
 const Art = () => {
-  let imgUrlsList = [];
+  let imgUrlsList = []
   const [urls, setUrls] = useState([])
 
   useEffect(() => {
@@ -12,8 +12,8 @@ const Art = () => {
       .get('https://nonprod-website.firebaseio.com/art.json')
       .then((response) => {
         renderPhotos(response.data)
-        setUrls(imgUrlsList);
-      });
+        setUrls(imgUrlsList)
+      })
   }, [])
 
   const renderPhotos = (photosList) => {
@@ -23,19 +23,19 @@ const Art = () => {
   }
 
   return (
-    <>
+    <div className={styles.artContainer}>
       <h1>My Art</h1>
       <p>
         Drawing is my biggest passion since I have memory!
         Those are some of my favorite ones
       </p>
-      <div className='photos-grid-container'>
+      <div className={styles.photosGridContainer}>
         {urls.map((url, index) => {
           return <img src={url} alt={`Photo ${index}`}/>
         })}
       </div>
-    </>
+    </div>
   )
-};
+}
 
-export default Art;
+export default Art

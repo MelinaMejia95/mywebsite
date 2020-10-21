@@ -1,12 +1,12 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import { MainPage } from './containers/MainPage';
-import { Talks } from './containers/Talks';
-import { Art } from './containers/Art';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import './App.css';
+import { MainPage } from './containers/MainPage'
+import { Talks } from './containers/Talks'
+import { Art } from './containers/Art'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import './App.css'
 
 function App() {
   return (
@@ -30,4 +30,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

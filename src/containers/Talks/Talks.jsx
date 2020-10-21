@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-import './Talks.scss';
-import { SectionList } from '../../components/SectionList';
+import styles from './Talks.module.scss'
+import { SectionList } from '../../components/SectionList'
 
 const Talks = () => {
-  let transformedTalks = [];
+  let transformedTalks = []
   let orderedTalks = {}
   const [talks, setTalks] = useState([])
 
@@ -13,15 +13,15 @@ const Talks = () => {
     axios
       .get('https://nonprod-website.firebaseio.com/talks.json')
       .then((response) => {
-        transformTalks(response.data);
+        transformTalks(response.data)
         groupTalks(transformedTalks)
-        setTalks(orderedTalks);
-      });
+        setTalks(orderedTalks)
+      })
   }, [])
 
   const transformTalks = (talksPreset) => {
     Object.keys(talksPreset).forEach((talkKey) => {
-      return transformedTalks.push(talksPreset[talkKey]);
+      return transformedTalks.push(talksPreset[talkKey])
     });
   }
 
@@ -50,7 +50,7 @@ const Talks = () => {
   }
 
   return (
-    <div className='talks-container'>
+    <div className={styles.talksContainer}>
       <h1>My talks over the years</h1>
       {
         Object.keys(talks).map((key, index) => {
@@ -67,4 +67,4 @@ const Talks = () => {
   )
 };
 
-export default Talks;
+export default Talks

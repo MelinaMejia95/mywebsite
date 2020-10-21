@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import './Header.scss';
-import { Dropdown } from '../Dropdown';
-import photo from '../../assets/images/me.PNG';
-import { navItemsPreset } from '../../constants/navItemsConstants';
+import './Header.scss'
+import { Dropdown } from '../Dropdown'
+import photo from '../../assets/images/me.PNG'
+import { navItemsPreset } from '../../constants/navItemsConstants'
 
 const Header = () => {
   const [mobileNavVisibility, setMobileNavVisibility] = useState(false)
@@ -67,6 +67,6 @@ const Header = () => {
       </nav>
     </>
   )
-};
+}
 
-export default Header;
+export default Header

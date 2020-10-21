@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Card } from '../Card';
+import { Card } from '../Card'
 import './SectionList.scss'
 
 const SectionList = ({
@@ -22,6 +22,6 @@ const SectionList = ({
       })}
     </div>
   )
-};
+}
 
-export default SectionList;
+export default SectionList

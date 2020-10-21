@@ -1,28 +1,24 @@
 @import '../../scss/variables';
 
-.maingpage-container {
+.mainPageContainer {
   font-family: $rubik;
-  
-  h3 {
-    color: $light-red-1;
-  }
 
-  .introduction-container {
+  .introductionContainer {
     display: flex;
     flex-direction: column;
 
-    h1 {
+    .title {
       font-family: $ranchers;
       font-size: 6rem;
       margin: 0 auto;
     }
 
-    img {
-      height: 9rem;
+    .subtitle {
+      color: $dark-red-2
     }
   }
 
-  .presentation-container {
+  .presentationContainer {
     padding: 0 1rem;
 
     img {
@@ -30,19 +26,19 @@
     }
   }
 
-  .skills-container {
+  .skillsContainer {
     margin-top: 2.5rem;
     padding: 1rem 0;
     background-color: rgba(252, 145, 145, 0.194);
     border-top: 3px solid $light-red-1;
     border-bottom: 3px solid $light-red-1;
 
-    .skills-content {
+    .skillsContent {
       display: grid;
       grid-template-columns: repeat(3, 33.3%);
       grid-auto-rows: 8rem;
 
-      .skill-cards-container {
+      .skillCardsContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -51,7 +47,7 @@
           margin-bottom: 0.5rem;
         }
   
-        .skill-card {
+        .skillCard {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -69,10 +65,10 @@
     }
   }
 
-  .languages-container {
+  .languagesContainer {
     padding: 1.5rem 1rem;
 
-    .languages-card {
+    .languagesCard {
       display: flex;
       position: relative;
       margin-bottom: 0.2rem;
@@ -82,7 +78,7 @@
         width: 8rem;
       }
 
-      .language-description {
+      .languageDescription {
         margin: 0 1rem;
         display: flex;
         flex-direction: column;
@@ -94,20 +90,24 @@
         }
       }
 
-      &#english {
+      &:global(#english) {
         flex-direction: row-reverse;
       }
 
     }
 
-    .dots-container {
+    .rowReverse {
+      flex-direction: row-reverse;
+    }
+
+    .dotsContainer {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0 0.5rem;
 
-      .little-dot {
+      .littleDot {
         width: 10px;
         height: 10px;
         border-radius: 100%;
