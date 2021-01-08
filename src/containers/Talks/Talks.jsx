@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import styles from './Talks.module.scss'
+import { Loader } from '../../components/Loader'
 import { SectionList } from '../../components/SectionList'
 
 const Talks = () => {
   let transformedTalks = []
   let orderedTalks = {}
   const [talks, setTalks] = useState([])
+  const [loaderVisibility, setLoaderVisibility] = useState(true)
 
   useEffect(() => {
     axios
@@ -16,6 +18,7 @@ const Talks = () => {
         transformTalks(response.data)
         groupTalks(transformedTalks)
         setTalks(orderedTalks)
+        setLoaderVisibility(false)
       })
   }, [])
 
@@ -52,7 +55,12 @@ const Talks = () => {
   return (
     <div className={styles.talksContainer}>
       <h1>My talks over the years</h1>
-      {
+      {loaderVisibility ?
+        <Loader
+          type="Puff"
+          color="#FFF"
+        />
+        :
         Object.keys(talks).map((key, index) => {
           return (
             <SectionList

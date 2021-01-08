@@ -24,8 +24,8 @@ function App() {
             <Art />
           </Route>
         </Switch>
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

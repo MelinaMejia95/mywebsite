@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import styles from './Art.module.scss'
+import { Loader } from '../../components/Loader'
 
 const Art = () => {
   let imgUrlsList = []
   const [urls, setUrls] = useState([])
+  const [loaderVisibility, setLoaderVisibility] = useState(true)
 
   useEffect(() => {
     axios
@@ -13,6 +15,7 @@ const Art = () => {
       .then((response) => {
         renderPhotos(response.data)
         setUrls(imgUrlsList)
+        setLoaderVisibility(false)
       })
   }, [])
 
@@ -29,11 +32,18 @@ const Art = () => {
         Drawing is my biggest passion since I have memory!
         Those are some of my favorite ones
       </p>
-      <div className={styles.photosGridContainer}>
-        {urls.map((url, index) => {
-          return <img src={url} alt={`Photo ${index}`}/>
-        })}
-      </div>
+      {loaderVisibility ?
+        <Loader
+          type="Puff"
+          color="#FFF"
+        />
+        :
+        <div className={styles.photosGridContainer}>
+          {urls.map((url, index) => {
+            return <img src={url} alt={`Photo ${index}`}/>
+          })}
+        </div>
+      }
     </div>
   )
 }

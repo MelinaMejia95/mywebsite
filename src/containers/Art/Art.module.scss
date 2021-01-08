@@ -11,9 +11,11 @@
     -webkit-text-fill-color: transparent;
     margin: 0;
   }
-
+  
   p {
     color: white;
+    font-family: $poppins;
+    padding: 0 1.5rem;
   }
 
   .photosGridContainer {
