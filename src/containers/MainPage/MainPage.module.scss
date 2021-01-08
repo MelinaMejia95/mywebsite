@@ -2,24 +2,40 @@
 
 .mainPageContainer {
   font-family: $rubik;
+  background-color: black;
+
+  h3 {
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+  }
 
   .introductionContainer {
     display: flex;
     flex-direction: column;
 
     .title {
+      background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-family: $ranchers;
       font-size: 6rem;
       margin: 0 auto;
     }
 
     .subtitle {
-      color: $dark-red-2
+      color: white;
     }
   }
 
   .presentationContainer {
     padding: 0 1rem;
+    font-family: $poppins;
+
+    p {
+      color: white;
+    }
 
     img {
       width: 200px;
@@ -27,13 +43,10 @@
   }
 
   .skillsContainer {
-    margin-top: 2.5rem;
-    padding: 1rem 0;
-    background-color: rgba(252, 145, 145, 0.194);
-    border-top: 3px solid $light-red-1;
-    border-bottom: 3px solid $light-red-1;
-
+    margin-top: 3.5rem;
+    
     .skillsContent {
+      font-family: $poppins;
       display: grid;
       grid-template-columns: repeat(3, 33.3%);
       grid-auto-rows: 8rem;
@@ -45,6 +58,7 @@
 
         span {
           margin-bottom: 0.5rem;
+          color: white;
         }
   
         .skillCard {
@@ -67,12 +81,18 @@
 
   .languagesContainer {
     padding: 1.5rem 1rem;
+    color: white;
+
+    p {
+      font-family: $poppins;
+    }
 
     .languagesCard {
       display: flex;
       position: relative;
       margin-bottom: 0.2rem;
       width: 100%;
+      font-family: $poppins;
 
       img {
         width: 8rem;
@@ -111,7 +131,7 @@
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        background-color: black;
+        background-color: white;
       }
     }
 

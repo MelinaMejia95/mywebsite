@@ -6,9 +6,6 @@
   margin-bottom: 2rem;
   border-radius: 10px;
   background-color: $black;
-  -webkit-box-shadow: 1px 16px 25px -5px $dark-red-1;
-  -moz-box-shadow: 1px 16px 25px -5px $dark-red-1;
-  box-shadow: 1px 16px 25px -5px $dark-red-1;
 
   .image-container {
     height: 13rem;
@@ -28,6 +25,7 @@
     font-size: 1.2rem;
     padding: 1rem;
     color: white;
+    background-color: $dark-grey-1;
 
     a {
       color: white;

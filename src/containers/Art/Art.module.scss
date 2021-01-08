@@ -1,17 +1,25 @@
 @import '../../scss/variables';
 
 .artContainer {
+  background-color: black;
+  padding-bottom: 3rem;
 
   h1 {
     font-family: $rubik;
-    color: $dark-red-1;
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+
+  p {
+    color: white;
   }
 
   .photosGridContainer {
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
     grid-auto-rows: 8rem;
-    margin-bottom: 3rem;
   
     img {
       width: 100%;
