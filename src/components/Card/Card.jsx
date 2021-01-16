@@ -2,6 +2,20 @@ import React from 'react'
 
 import './Card.scss'
 
+export const CustomCard = ({
+  imgSource,
+  title,
+  description
+}) => {
+  return (
+    <div>
+      <img src={imgSource} alt={title}/>
+      <label>{title}</label>
+      <label>{description}</label>
+    </div>
+  )
+}
+
 const Card = ({
   title,
   photo,

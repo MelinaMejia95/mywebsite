@@ -10,5 +10,9 @@ export const navItemsPreset = [
   {
     link: '/art',
     description: 'Art'
+  },
+  {
+    link: '/volunteering',
+    description: 'Volunteering'
   }
 ]

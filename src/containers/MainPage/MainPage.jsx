@@ -16,8 +16,8 @@ const MainPage = () => {
         <img src={photo} alt="Melina's photo" />
         <p>
           I'm a software engineer from Medellín-Colombia 🇨🇴 <br />I have a
-          huge passion about programming, web accesibility, drawing and learning
-          languages.
+          huge passion about programming, web accesibility, drawing, volunteering 
+          and learning languages.
         </p>
       </section>
       <section className={styles.skillsContainer}>

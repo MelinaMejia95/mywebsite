@@ -6,6 +6,7 @@ import { Talks } from './containers/Talks'
 import { Art } from './containers/Art'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { Volunteering } from './containers/Volunteering'
 import './App.css'
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path='/art'>
             <Art />
+          </Route>
+          <Route path='/volunteering'>
+            <Volunteering />
           </Route>
         </Switch>
         <Footer />

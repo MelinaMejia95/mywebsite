@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.volunteeringContainer {
+  background-color: black;
+  padding-bottom: 3rem;
+
+  h1 {
+    font-family: $rubik;
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+
+  p {
+    color: white;
+    font-family: $poppins;
+    padding: 0 1.5rem;
+  }
+}
