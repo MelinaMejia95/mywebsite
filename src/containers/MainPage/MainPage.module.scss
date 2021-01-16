@@ -6,6 +6,7 @@
 
   h3 {
     background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
@@ -17,6 +18,7 @@
 
     .title {
       background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: $ranchers;
@@ -89,13 +91,14 @@
 
     .languagesCard {
       display: flex;
+      justify-content: space-around;
       position: relative;
       margin-bottom: 0.2rem;
       width: 100%;
       font-family: $poppins;
 
       img {
-        width: 8rem;
+        width: 12rem;
       }
 
       .languageDescription {
@@ -118,21 +121,6 @@
 
     .rowReverse {
       flex-direction: row-reverse;
-    }
-
-    .dotsContainer {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 0.5rem;
-
-      .littleDot {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background-color: white;
-      }
     }
 
     .clearfix {

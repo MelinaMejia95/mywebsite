@@ -2,7 +2,7 @@ import React from 'react'
 
 import { skillsPreset } from '../../constants/skillsContants'
 import { languagesPreset } from '../../constants/languagesConstants'
-import photo from '../../assets/images/me.PNG'
+import photo from '../../assets/images/Me.png'
 import styles from './MainPage.module.scss'
 
 const MainPage = () => {
@@ -15,7 +15,7 @@ const MainPage = () => {
       <section className={styles.presentationContainer}>
         <img src={photo} alt="Melina's photo" />
         <p>
-          I'm a front-end developer from Medellín-Colombia 🇨🇴 <br />I have a
+          I'm a software engineer from Medellín-Colombia 🇨🇴 <br />I have a
           huge passion about programming, web accesibility, drawing and learning
           languages.
         </p>
@@ -48,13 +48,6 @@ const MainPage = () => {
                 <div className={styles.languageDescription}>
                   <h4>{language.title}</h4>
                   <label>{language.level}</label>
-                </div>
-                <div className={styles.dotsContainer}>
-                  <span className={styles.littleDot}></span>
-                  <span className={styles.littleDot}></span>
-                  <span className={styles.littleDot}></span>
-                  <span className={styles.littleDot}></span>
-                  <span className={styles.littleDot}></span>
                 </div>
               </div>
               {language.title === 'english' && <div className={styles.clearfix}></div>}
