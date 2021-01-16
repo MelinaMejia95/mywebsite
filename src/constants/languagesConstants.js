@@ -1,6 +1,6 @@
-import spanish from '../assets/images/spanish.PNG'
-import english from '../assets/images/english.PNG'
-import korean from '../assets/images/korean.PNG'
+import spanish from '../assets/images/spanish.png'
+import english from '../assets/images/english.png'
+import korean from '../assets/images/korean.png'
 
 export const languagesPreset = [
   {
