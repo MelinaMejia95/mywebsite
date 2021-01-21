@@ -8,10 +8,14 @@ export const CustomCard = ({
   description
 }) => {
   return (
-    <div>
-      <img src={imgSource} alt={title}/>
-      <label>{title}</label>
-      <label>{description}</label>
+    <div className='custom-card-container'>
+      <div className='image-container'>
+        <img src={imgSource} alt={title}/>
+      </div>
+      <div className='description-container'>
+        <label className='title'>{title}</label>
+        <label className='description'>{description}</label>
+      </div>
     </div>
   )
 }

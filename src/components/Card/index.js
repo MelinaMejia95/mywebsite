@@ -1,1 +1,3 @@
-export {default as Card} from './Card'
+import { CustomCard } from './Card'
+
+export {default as Card, CustomCard} from './Card'
