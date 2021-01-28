@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { skillsPreset } from '../../constants/skillsContants'
 import { languagesPreset } from '../../constants/languagesConstants'
@@ -6,19 +7,17 @@ import photo from '../../assets/images/Me.png'
 import styles from './MainPage.module.scss'
 
 const MainPage = () => {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.mainPageContainer}>
       <section className={styles.introductionContainer}>
-        <h1 className={styles.title}>I'm Melina</h1>
-        <h3 className={styles.subtitle}>Nice to meet you</h3>
+        <h1 className={styles.title}>{t('title')}</h1>
+        <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </section>
       <section className={styles.presentationContainer}>
         <img src={photo} alt="Melina's photo" />
-        <p>
-          I'm a software engineer from Medellín-Colombia 🇨🇴 <br />I have a
-          huge passion about programming, web accesibility, drawing, volunteering 
-          and learning languages.
-        </p>
+        <p>{t('introduction')}</p>
       </section>
       <section className={styles.skillsContainer}>
         <h3>My skills</h3>
