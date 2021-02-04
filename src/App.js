@@ -14,20 +14,22 @@ function App() {
     <>
       <div className='App'>
         <Header />
-        <Switch>
-          <Route exact path='/'>
-            <MainPage />
-          </Route>
-          <Route path='/talks'>
-            <Talks />
-          </Route>
-          <Route path='/art'>
-            <Art />
-          </Route>
-          <Route path='/volunteering'>
-            <Volunteering />
-          </Route>
-        </Switch>
+        <div className='mainContent'>
+          <Switch>
+            <Route exact path='/'>
+              <MainPage />
+            </Route>
+            <Route path='/talks'>
+              <Talks />
+            </Route>
+            <Route path='/art'>
+              <Art />
+            </Route>
+            <Route path='/volunteering'>
+              <Volunteering />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </div>
     </>

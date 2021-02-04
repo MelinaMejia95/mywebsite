@@ -16,14 +16,16 @@ const Header = () => {
       {mobileNavVisibility && (
         <div className='backdrop' onClick={toogleMobileNavVisibility}></div>
       )}
+      <div className='tooble-button-container'>
+        <div className='toggle-button' onClick={toogleMobileNavVisibility}>
+          <input type="checkbox" checked={mobileNavVisibility} />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <div className='header-container'>
         <div className='left-content'>
-          <div className='toggle-button' onClick={toogleMobileNavVisibility}>
-            <input type="checkbox" checked={mobileNavVisibility} />
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
           <img src={photo} alt="Melina's photo" />
         </div>
         <div className='right-content'>
