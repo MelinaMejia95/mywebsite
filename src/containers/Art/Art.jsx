@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 
 import styles from './Art.module.scss'
-import { Loader } from '../../components/Loader'
 import { customStyles } from './carouselStyles'
+import { Loader } from '../../components/Loader'
 
 const navButtonStyles = (base) => ({
   ...base,
-  ...customStyles.navButtonStyles
+  ...customStyles.navButtonStyles,
 })
 
 const Art = () => {
+  const { t } = useTranslation()
   let imgUrlsList = []
   const [urls, setUrls] = useState([])
   const [selectedIndex, setSelectedIndex] = useState('')
@@ -42,11 +44,8 @@ const Art = () => {
 
   return (
     <div className={styles.artContainer}>
-      <h1>My Art</h1>
-      <p>
-        Drawing is my biggest passion since I have memory! Those are some of my
-        favorite ones
-      </p>
+      <h1>{t('artTitle')}</h1>
+      <p>{t('artDescription')}</p>
       {loaderVisibility ? (
         <Loader type='Puff' color='#FFF' />
       ) : (
@@ -70,11 +69,11 @@ const Art = () => {
               styles={{
                 container: (base) => ({
                   ...base,
-                  ...customStyles.container
+                  ...customStyles.container,
                 }),
                 view: (base) => ({
                   ...base,
-                  ...customStyles.view
+                  ...customStyles.view,
                 }),
                 navigationPrev: navButtonStyles,
                 navigationNext: navButtonStyles,

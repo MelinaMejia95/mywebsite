@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import axios from 'axios'
 
 import styles from './Talks.module.scss'
@@ -6,6 +7,7 @@ import { Loader } from '../../components/Loader'
 import { SectionList } from '../../components/SectionList'
 
 const Talks = () => {
+  const { t } = useTranslation()
   let transformedTalks = []
   let orderedTalks = {}
   const [talks, setTalks] = useState([])
@@ -54,7 +56,7 @@ const Talks = () => {
 
   return (
     <div className={styles.talksContainer}>
-      <h1>My talks over the years</h1>
+      <h1>{t('talksTitle')}</h1>
       {loaderVisibility ?
         <Loader
           type="Puff"
