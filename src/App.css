@@ -4,5 +4,9 @@
 }
 
 .mainContent {
-  padding-top: 4.5rem;
+  padding-top: 6rem;
+}
+
+h1, h2, h3, p {
+  margin: 0;
 }
