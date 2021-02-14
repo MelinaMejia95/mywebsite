@@ -15,7 +15,7 @@ const SectionList = ({
           <Card
             key={index}
             title={item.title}
-            photo={item.imageUrl}
+            photo={item.imgSource}
             link={item.link}
           />
         )

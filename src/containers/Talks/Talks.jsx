@@ -1,34 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import axios from 'axios'
 
 import styles from './Talks.module.scss'
 import { Loader } from '../../components/Loader'
 import { SectionList } from '../../components/SectionList'
+import { talksPreset } from '../../constants/talksConstans'
+
 
 const Talks = () => {
   const { t } = useTranslation()
-  let transformedTalks = []
   let orderedTalks = {}
   const [talks, setTalks] = useState([])
   const [loaderVisibility, setLoaderVisibility] = useState(true)
 
   useEffect(() => {
-    axios
-      .get('https://nonprod-website.firebaseio.com/talks.json')
-      .then((response) => {
-        transformTalks(response.data)
-        groupTalks(transformedTalks)
-        setTalks(orderedTalks)
-        setLoaderVisibility(false)
-      })
+    groupTalks(talksPreset)
+    setTalks(orderedTalks)
+    /* eslint-disable */
+    setTimeout(() => {
+      setLoaderVisibility(false)
+    }, 2000)
   }, [])
-
-  const transformTalks = (talksPreset) => {
-    Object.keys(talksPreset).forEach((talkKey) => {
-      return transformedTalks.push(talksPreset[talkKey])
-    });
-  }
 
   const getTalksYears = (talks) => {
     const years = []
