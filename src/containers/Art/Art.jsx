@@ -31,9 +31,8 @@ const Art = () => {
   }, [])
 
   const renderPhotos = (photosList) => {
-    console.log(photosList)
-    return Object.keys(photosList).forEach((key) => {
-      return imgUrlsList.push({ source: photosList[key] })
+    Object.keys(photosList).forEach((key) => {
+      imgUrlsList.push({ source: photosList[key] })
     })
   }
 
@@ -50,10 +49,10 @@ const Art = () => {
         <Loader type='Puff' color='#FFF' />
       ) : (
         <div className={styles.photosGridContainer}>
-          {urls.map((url, index) => {
+          {urls.map((img, index) => {
             return (
               <div onClick={() => handleImgClick(index)} key={index}>
-                <img src={url.source} alt={`Photo ${index}`} />
+                <img src={img.source} alt={`Melina's drawing`} />
               </div>
             )
           })}
