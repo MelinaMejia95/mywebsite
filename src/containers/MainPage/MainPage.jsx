@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './MainPage.module.scss'
 import photo from '../../assets/images/Me.png'
+import korean from '../../assets/images/korean.png'
+import spanish from '../../assets/images/spanish.png'
+import english from '../../assets/images/english.png'
 import { skillsPreset } from '../../constants/skillsContants'
 import { languagesPreset } from '../../constants/languagesConstants'
 
@@ -37,26 +40,28 @@ const MainPage = () => {
       <section className={styles.languagesContainer}>
         <h3>{t('languagesTitle')}</h3>
         <p>{t('languagesDescription')}</p>
-        {languagesPreset.map((language, index) => {
-          return (
-            <>
-              <div
-                className={styles.languagesCard}
-                id={language.title}
-                key={index}
-              >
-                <img src={language.photo} alt={language.photoAlt} />
-                <div className={styles.languageDescription}>
-                  <h4>{language.title}</h4>
-                  <label>{language.level}</label>
-                </div>
-              </div>
-              {language.title === 'english' && (
-                <div className={styles.clearfix}></div>
-              )}
-            </>
-          )
-        })}
+        <div className={styles.languagesCard} id='spanish'>
+          <img src={spanish} alt={`Meli's cat speaking spanish`} />
+          <div className={styles.languageDescription}>
+            <h4>{t('spanish')}</h4>
+            <label>{t('spanishLevel')}</label>
+          </div>
+        </div>
+        <div className={styles.languagesCard} id='english'>
+          <img src={english} alt={`Meli's cat speaking english`} />
+          <div className={styles.languageDescription}>
+            <h4>{t('english')}</h4>
+            <label>{t('englishLevel')}</label>
+          </div>
+        </div>
+        <div className={styles.clearfix}></div>
+        <div className={styles.languagesCard} id='korean'>
+          <img src={korean} alt={`Meli's cat speaking korean`} />
+          <div className={styles.languageDescription}>
+            <h4>{t('korean')}</h4>
+            <label>{t('koreanLevel')}</label>
+          </div>
+        </div>
       </section>
     </div>
   )

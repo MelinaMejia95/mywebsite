@@ -1,28 +1,3 @@
-import spanish from '../assets/images/spanish.png'
-import english from '../assets/images/english.png'
-import korean from '../assets/images/korean.png'
-
-export const languagesPreset = [
-  {
-    photo: spanish,
-    photoAlt: 'Melina speaking spanish',
-    title: 'spanish',
-    level: 'Native'
-  },
-  {
-    photo: english,
-    photoAlt: 'Melina speaking english',
-    title: 'english',
-    level: 'Level C1'
-  },
-  {
-    photo: korean,
-    photoAlt: 'Melina speaking korean',
-    title: 'korean',
-    level: 'Learning!'
-  }
-]
-
 export const englishTranslation = {
   title: `I'm Melina`,
   subtitle: 'Nice to meet you',
@@ -45,7 +20,13 @@ export const englishTranslation = {
   aboutLink: 'About',
   talksLink: 'Talks',
   artLink: 'Illustrations',
-  volunteeringLink: 'Volunteering'
+  volunteeringLink: 'Volunteering',
+  spanish: 'Spanish',
+  spanishLevel: 'Native',
+  english: 'English',
+  englishLevel:'C1 level',
+  korean: 'Korean',
+  koreanLevel: 'Basic level'
 }
 
 export const spanishTranslation = {
@@ -70,6 +51,12 @@ export const spanishTranslation = {
   aboutLink: 'Sobre mi',
   talksLink: 'Charlas',
   artLink: 'Ilustraciones',
-  volunteeringLink: 'Voluntariado'
+  volunteeringLink: 'Voluntariado',
+  spanish: 'Español',
+  spanishLevel: 'Nativo',
+  english: 'Inglés',
+  englishLevel:'Nivel C1',
+  korean: 'Coreano',
+  koreanLevel: 'Nivel básico'
 }
 
