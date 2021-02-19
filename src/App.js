@@ -29,8 +29,8 @@ function App() {
               <Volunteering />
             </Route>
           </Switch>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </>
   )

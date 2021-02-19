@@ -25,15 +25,17 @@ const Art = () => {
       {loaderVisibility ? (
         <Loader type='Puff' color='#FFF' />
       ) : (
-        <Carousel>
-          {artPreset.map((img, index) => {
-            return (
-              <div key={index}>
-                <img src={img.source} alt={img.caption} />
-              </div>
-            )
-          })}
-        </Carousel>
+        <div className={styles.carouselContainer}>
+          <Carousel>
+            {artPreset.map((img, index) => {
+              return (
+                <div key={index}>
+                  <img src={img.source} alt={img.caption} />
+                </div>
+              )
+            })}
+          </Carousel>
+        </div>
       )}
     </div>
   )
