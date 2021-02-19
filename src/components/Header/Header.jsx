@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import './Header.scss'
 import { Dropdown } from '../Dropdown'
 import photo from '../../assets/images/Me.png'
-import { navItemsPreset } from '../../constants/navItemsConstants'
 
 const Header = () => {
+  const { t } = useTranslation()
   const [mobileNavVisibility, setMobileNavVisibility] = useState(false)
 
   const toogleMobileNavVisibility = () => setMobileNavVisibility(!mobileNavVisibility)
@@ -32,13 +33,12 @@ const Header = () => {
         </div>
         <nav className='main-nav'>
           <ul>
-            {navItemsPreset.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link to={item.link}>{item.description}</Link>
-                </li>
-              )
-            })}
+            <li >
+              <Link to='/'>{t('aboutLink')}</Link>
+              <Link to='/talks'>{t('talksLink')}</Link>
+              <Link to='/art'>{t('artLink')}</Link>
+              <Link to='/volunteering'>{t('volunteeringLink')}</Link>
+            </li>
             <li>
               <Dropdown />
             </li>
@@ -47,15 +47,26 @@ const Header = () => {
       </div>
       <nav className={`mobile-nav ${mobileNavVisibility ? 'open' : ''}`}>
         <ul className='mobile-nav__items'>
-          {navItemsPreset.map((item, index) => {
-            return (
-              <li className='mobile-nav__item' key={index}>
-                <Link to={item.link} onClick={toogleMobileNavVisibility}>
-                  {item.description}
-                </Link>
-              </li>
-            )
-          })}
+          <li className='mobile-nav__item'>
+            <Link to={'/'} onClick={toogleMobileNavVisibility}>
+              {t('aboutLink')}
+            </Link>
+          </li>
+          <li className='mobile-nav__item'>
+            <Link to={'/talks'} onClick={toogleMobileNavVisibility}>
+              {t('talksLink')}
+            </Link>
+          </li>
+          <li className='mobile-nav__item'>
+            <Link to={'/art'} onClick={toogleMobileNavVisibility}>
+              {t('artLink')}
+            </Link>
+          </li>
+          <li className='mobile-nav__item'>
+            <Link to={'/volunteering'} onClick={toogleMobileNavVisibility}>
+              {t('volunteeringLink')}
+            </Link>
+          </li>
           <li className='mobile-nav__item'>
             <Dropdown />
           </li>

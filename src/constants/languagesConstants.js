@@ -34,20 +34,24 @@ export const englishTranslation = {
   languagesDescription: `Those are the languages I speak and/or I'm learning`,
   footerTitle: 'Made with ❤️',
   talksTitle: 'My talks over the years',
-  artTitle: 'My Art',
+  artTitle: 'My illustrations',
   artDescription: `Drawing is my biggest passion since I have memory! Those are some of my
     favorite ones`,
   volunteeringTitle: 'Volunteering Experience',
   volunteeringDescription: `Tech communities have had a huge impact on my life and my professional
     career, I've met incredible people and made amazing friends. <br />I
     love having the opportunity to share my knowledge and change other
-    people's lives through code!`
+    people's lives through code!`,
+  aboutLink: 'About',
+  talksLink: 'Talks',
+  artLink: 'Illustrations',
+  volunteeringLink: 'Volunteering'
 }
 
 export const spanishTranslation = {
   title: `Soy Melina`,
   subtitle: 'Un placer conocerte',
-  introduction: `Soy una desarrolladora de software de Medellín-Colombia 🇨🇴 <br />
+  introduction: `Soy desarrolladora de software nacida en Medellín-Colombia 🇨🇴
     Soy apasionada por la programación, la accesibilidad web, el dibujo, ser voluntaria
     y aprender idiomas.`,
   skillsTitle: 'Mis habilidades',
@@ -55,13 +59,17 @@ export const spanishTranslation = {
   languagesDescription: `Estos son los idiomas que hablo y/o estoy aprendiendo`,
   footerTitle: 'Hecho con ❤️',
   talksTitle: 'Mis charlas a través de los años',
-  artTitle: 'Mis dibujos',
+  artTitle: 'Mis ilustraciones',
   artDescription: `El dibujo es mi mayor pasión desde que tengo memoria! Estos son algunos
     de mis favoritos`,
   volunteeringTitle: 'Experiencia de voluntariado',
   volunteeringDescription: `Las comunidades de tecnología han tenido un gran impacto en mi vida
     y mi carrera profesional, he conocido personas maravillosas y he hecho amigos increíbles.
     Amo tener la oportunidad de compartir mi conocimiento y cambiar la vida de otras personas
-    a través de la programación!`
+    a través de la programación!`,
+  aboutLink: 'Sobre mi',
+  talksLink: 'Charlas',
+  artLink: 'Ilustraciones',
+  volunteeringLink: 'Voluntariado'
 }
 
