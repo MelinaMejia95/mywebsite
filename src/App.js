@@ -1,18 +1,19 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import { MainPage } from './containers/MainPage'
-import { Talks } from './containers/Talks'
 import { Art } from './containers/Art'
+import { Talks } from './containers/Talks'
 import { Header } from './components/Header'
+import { Skills } from './containers/Skills'
 import { Footer } from './components/Footer'
+import { MainPage } from './containers/MainPage'
 import { Volunteering } from './containers/Volunteering'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <div className='App'>
+    <div className='App'>
+      <div className='desktopContainer'>
         <Header />
         <div className='mainContent'>
           <Switch>
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path='/talks'>
               <Talks />
+            </Route>
+            <Route path='/skills'>
+              <Skills />
             </Route>
             <Route path='/art'>
               <Art />
@@ -32,7 +36,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

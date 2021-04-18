@@ -3,7 +3,7 @@
 .mainPageContainer {
   font-family: $rubik;
   background-color: black;
-  padding-top: 6rem;
+  padding: 5rem 0 3rem;
 
   h3 {
     background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
@@ -23,12 +23,18 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: $ranchers;
-      font-size: 6rem;
+      font-size: 4rem;
       margin: 0 auto;
     }
 
     .subtitle {
       color: white;
+    }
+  }
+
+  .imageContainer {
+    img {
+      width: 200px;
     }
   }
 
@@ -39,98 +45,67 @@
     p {
       color: white;
     }
-
-    img {
-      width: 200px;
-    }
   }
+  
+}
 
-  .skillsContainer {
-    margin-top: 3.5rem;
+@media (min-width: 650px) {
+  .mainPageContainer {
+    display: grid;
+    grid-template-areas:
+      'photo intro'
+      'photo presentation';
+    padding: 0;
+    grid-template-columns: 50% 50%;
     
-    .skillsContent {
-      font-family: $poppins;
-      display: grid;
-      grid-template-columns: repeat(3, 33.3%);
-      grid-auto-rows: 8rem;
+    .introductionContainer {
+      grid-area: intro;
+      align-self: end;
+      margin-bottom: 1rem;
 
-      .skillCardsContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .title{
+        font-size: 3rem;
+      }
 
-        span {
-          margin-bottom: 0.5rem;
-          color: white;
-        }
-  
-        .skillCard {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 5rem;
-          height: 5rem;
-          border-radius: 100%;
-          background-color: #ffffff;
-  
-          img {
-            width: 70%;
-            height: 70%;
-          }
-        }
+      .subtitle {
+        font-size: 1.5rem;
       }
     }
-  }
 
-  .languagesContainer {
-    padding: 1.5rem 1rem;
-    color: white;
-
-    p {
-      font-family: $poppins;
-    }
-
-    .languagesCard {
-      display: flex;
-      justify-content: space-around;
-      position: relative;
-      margin-bottom: 0.2rem;
-      width: 100%;
-      font-family: $poppins;
+    .imageContainer {
+      grid-area: photo;
+      align-self: center;
+      justify-self: end;
 
       img {
-        width: 12rem;
+        width: 100%;
+        margin-left: 1.5rem;
       }
-
-      .languageDescription {
-        margin: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        h4 {
-          text-transform: capitalize;
-          margin: 0 0 0.5rem;
-        }
-      }
-
-      &:global(#english) {
-        flex-direction: row-reverse;
-      }
-
     }
 
-    .rowReverse {
-      flex-direction: row-reverse;
-    }
-
-    .clearfix {
-      clear: both;
-    }
-
-    #english {
-      float: right;
+    .presentationContainer {
+      grid-area: presentation;
+      font-size: 1rem;
+      align-self: baseline;
     }
   }
-  
+}
+
+@media (min-width: 930px) {
+  .mainPageContainer {
+    grid-template-areas:
+        '. photo intro .'
+        '. photo presentation .';
+    padding: 0;
+    grid-template-columns: auto 25% 35% auto;
+
+    .introductionContainer {
+      .title{
+        font-size: 4rem;
+      }
+      .subtitle {
+        font-size: 2rem;
+      }
+    }
+  }
 }

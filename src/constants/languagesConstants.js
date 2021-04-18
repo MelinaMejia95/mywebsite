@@ -17,7 +17,7 @@ export const englishTranslation = {
     career, I've met incredible people and made amazing friends. <br />I
     love having the opportunity to share my knowledge and change other
     people's lives through code!`,
-  aboutLink: 'About',
+  skillsLink: 'Skills',
   talksLink: 'Talks',
   artLink: 'Illustrations',
   volunteeringLink: 'Volunteering',
@@ -48,7 +48,7 @@ export const spanishTranslation = {
     y mi carrera profesional, he conocido personas maravillosas y he hecho amigos increíbles.
     Amo tener la oportunidad de compartir mi conocimiento y cambiar la vida de otras personas
     a través de la programación!`,
-  aboutLink: 'Sobre mi',
+  skillsLink: 'Habilidades',
   talksLink: 'Charlas',
   artLink: 'Ilustraciones',
   volunteeringLink: 'Voluntariado',

@@ -1,0 +1,157 @@
+@import '../../scss/variables';
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding-top: 6rem;
+
+  h1 {
+    font-family: $rubik;
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 1.5rem;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .techSkills, .languageSkills {
+      position: relative;
+      border: 1px solid white;
+      border-radius: 3rem;
+      padding: 1rem 0.5rem;
+      margin-top: 2.5rem;
+      min-width: 345px;
+      min-height: 500px;
+  
+      label {
+        position: absolute;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        background-color: white;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        top: -2rem;
+      }
+    }
+
+    .techSkills {
+  
+      .skillsContent {
+        font-family: $poppins;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3%);
+        grid-auto-rows: 8rem;
+        margin-top: 1.5rem;
+  
+        .skillCardsContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          span {
+            margin-bottom: 0.5rem;
+            color: white;
+          }
+    
+          .skillCard {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100%;
+            background-color: #ffffff;
+    
+            img {
+              width: 70%;
+              height: 70%;
+            }
+          }
+        }
+      }
+    }
+
+    .languageSkills {
+      margin: 3.5rem 0;
+  
+      p {
+        font-family: $poppins;
+      }
+  
+      .languagesCard {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        margin-bottom: 0.2rem;
+        width: 100%;
+        font-family: $poppins;
+  
+        img {
+          width: 10rem;
+        }
+  
+        .languageDescription {
+          margin: 0 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: white;
+  
+          h4 {
+            text-transform: capitalize;
+            margin: 0 0 0.5rem;
+          }
+        }
+  
+        &:global(#english) {
+          flex-direction: row-reverse;
+        }
+  
+      }
+  
+      .rowReverse {
+        flex-direction: row-reverse;
+      }
+  
+      .clearfix {
+        clear: both;
+      }
+  
+      #english {
+        float: right;
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .skillsContainer {
+    padding: 0;
+
+    .cardsContainer{
+      justify-content: space-around;
+      margin-bottom: 0.5rem;
+
+      .techSkills, .languageSkills {
+        margin: 0;
+      }
+
+      .languageSkills {
+        margin: 0;
+      }
+    }
+
+  }
+}

@@ -10,3 +10,18 @@ footer {
   color: white;
   font-family: $mitr;
 }
+
+@media (min-width: 650px) {
+  footer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 4rem;
+
+    label {
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

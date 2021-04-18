@@ -9,6 +9,7 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .tooble-button-container {
   position: fixed;
   display: flex;
@@ -100,27 +101,12 @@
       height: 60px;
       border-radius: 50%;
     }
-  }
 
-
-  .main-nav {
-    display: none;
-    width: 60%;
-
-    ul {
-      display: flex;
-      justify-content: space-between;
-      list-style-type: none;
-      padding: 0;
-
-      li {
-
-        a {
-          text-decoration: none;
-        }
-      }
+    .main-nav {
+      display: none;
     }
   }
+
 }
 
 .mobile-nav {
@@ -164,4 +150,117 @@
 
 .open {
   transform: none;
+}
+
+@media (min-width: 650px) {
+  .header-container {
+    position: relative;
+    background-color: transparent;
+    width: auto;
+    margin: 0 2rem;
+    padding: 1rem 0 0 1rem;
+    
+    .left-content {
+      padding: 0;
+      width: 100%;
+
+      .main-nav {
+        display: flex;
+        font-family: $mitr;
+        width: 100%;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          list-style-type: none;
+          padding: 0;
+          width: 100%;
+          align-items: center;
+    
+          li {
+    
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 1rem;
+              margin: 0 1%;
+              padding: 0.5rem;
+              border: 1px solid transparent;
+            }
+
+            a:hover {
+              border: 1px solid white;
+              border-radius: 3rem;
+            }
+
+            .flagsButton {
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+
+              &:focus {
+                border: none;
+                outline: none;
+              }
+
+              img {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-nav, .tooble-button-container {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  .header-container {
+    .left-content {
+      .main-nav {
+        .flagsButton {
+          display: inline;
+        }
+        .desktopDropdown {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 930px) {
+  .header-container {
+    .left-content {
+      .main-nav {
+        ul {
+          li {
+            a {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header-container {
+    .left-content {
+      .main-nav {
+        .flagsButton {
+          display: none;
+        }
+        .desktopDropdown {
+          display: flex;
+        }
+      }
+    }
+  }
 }
