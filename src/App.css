@@ -35,3 +35,9 @@ h1, h2, h3, p {
     grid-template-rows: 90% 10%;
   }
 }
+
+@media (min-width: 650px) and (max-width: 819px) {
+  .mainContent {
+    grid-template-rows: auto 2rem;
+  }
+}

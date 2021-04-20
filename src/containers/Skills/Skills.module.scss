@@ -29,7 +29,7 @@
       padding: 1rem 0.5rem;
       margin-top: 2.5rem;
       min-width: 345px;
-      min-height: 500px;
+      min-height: 450px;
   
       label {
         position: absolute;
@@ -139,10 +139,12 @@
 @media (min-width: 650px) {
   .skillsContainer {
     padding: 0;
+    background-color: transparent;
 
     .cardsContainer{
-      justify-content: space-around;
+      justify-content: space-evenly;
       margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
 
       .techSkills, .languageSkills {
         margin: 0;
@@ -150,8 +152,36 @@
 
       .languageSkills {
         margin: 0;
+
+        .languagesCard {
+          img {
+            width: 9rem;
+          }
+        }
       }
     }
 
+  }
+}
+
+@media (max-width: 819px) {
+  .skillsContainer {
+    .cardsContainer{
+      padding: 1rem 1rem 0 1rem;
+      margin-bottom: 0;
+
+      .languageSkills {
+        margin: 3rem 0 1.5rem 0
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1050px) {
+  .skillsContainer {
+    .cardsContainer{
+      width: 80%;
+    }
   }
 }

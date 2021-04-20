@@ -25,3 +25,9 @@ footer {
     }
   }
 }
+
+@media (min-width: 650px) and (max-width: 819px) {
+  footer {
+    padding: 0 4rem 1rem 4rem;
+  }
+}
