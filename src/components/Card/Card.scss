@@ -28,6 +28,9 @@
 
     a {
       color: white;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
   }
@@ -79,7 +82,7 @@
 
 @media (min-width: 650px) {
   .card-container {
-    min-width: 6rem;
-    max-width: 28.125rem;
+    min-width: 3rem;
+    max-width: 25rem;
   }
 }

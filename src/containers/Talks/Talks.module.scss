@@ -6,6 +6,12 @@
   align-items: center;
   padding-top: 6rem;
 
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h1 {
     font-family: $rubik;
     background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
@@ -21,15 +27,9 @@
     padding: 0;
 
     .cardsContainer {
-      /* display: flex;
+      flex-direction: row ;
       flex-wrap: wrap;
-      justify-content: center; */
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      width: 90%;
-      gap: 1rem;
-      justify-items: center;
+      justify-content: space-evenly;
     }
   }
 }
