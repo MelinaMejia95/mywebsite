@@ -2,10 +2,11 @@
 
 .card-container {
   width: 80%;
-  position: relative;
-  margin-bottom: 2rem;
-  border-radius: 10px;
+  border: 1px solid white;
+  border-radius: 3rem;
+  padding: 1.5rem;
   background-color: $black;
+  margin-bottom: 1.5rem;
 
   .image-container {
     height: 13rem;
@@ -13,8 +14,7 @@
     img {
       height: 100%;
       width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-radius: 3rem;
     }
   }
 
@@ -23,9 +23,8 @@
     flex-direction: column;
     font-family: $rubik;
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     color: white;
-    background-color: $dark-grey-1;
 
     a {
       color: white;
@@ -76,4 +75,11 @@
     }
   }
 
+}
+
+@media (min-width: 650px) {
+  .card-container {
+    min-width: 6rem;
+    max-width: 28.125rem;
+  }
 }

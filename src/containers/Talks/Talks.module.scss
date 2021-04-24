@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
   padding-top: 6rem;
 
   h1 {
@@ -13,5 +12,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 0 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .talksContainer {
+    padding: 0;
+
+    .cardsContainer {
+      /* display: flex;
+      flex-wrap: wrap;
+      justify-content: center; */
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      width: 90%;
+      gap: 1rem;
+      justify-items: center;
+    }
   }
 }

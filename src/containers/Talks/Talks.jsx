@@ -3,48 +3,20 @@ import { useTranslation } from 'react-i18next'
 
 import styles from './Talks.module.scss'
 import { Loader } from '../../components/Loader'
-import { SectionList } from '../../components/SectionList'
+import { Card } from '../../components/Card'
 import { talksPreset } from '../../constants/talksConstans'
 
 
 const Talks = () => {
   const { t } = useTranslation()
-  let orderedTalks = {}
-  const [talks, setTalks] = useState([])
   const [loaderVisibility, setLoaderVisibility] = useState(true)
 
   useEffect(() => {
-    groupTalks(talksPreset)
-    setTalks(orderedTalks)
     /* eslint-disable */
     setTimeout(() => {
       setLoaderVisibility(false)
     }, 2000)
   }, [])
-
-  const getTalksYears = (talks) => {
-    const years = []
-    Object.keys(talks).forEach(key => {
-      const year = years.find(year => talks[key].year === year)
-      if(!year) {
-        years.push(talks[key].year)
-      }
-    })
-    return years
-  }
-
-  const groupTalks = (talks) => {
-    const years = getTalksYears(talks)
-    years.forEach(year => {
-      const yearTalk = []
-      talks.forEach(talk => {
-        if(year === talk.year) {
-          yearTalk.push(talk)
-        }
-        orderedTalks[year] = yearTalk
-      })
-    })
-  }
 
   return (
     <div className={styles.talksContainer}>
@@ -55,15 +27,18 @@ const Talks = () => {
           color="#FFF"
         />
         :
-        Object.keys(talks).map((key, index) => {
-          return (
-            <SectionList
-              key={index}
-              title={key}
-              items={talks[key]}
-            />
-          )
-        })
+        <div className={styles.cardsContainer}>
+          {talksPreset.map((talk, index) => {
+            return (
+              <Card
+                key={index}
+                title={talk.title}
+                photo={talk.imgSource}
+                link={talk.link}
+              />
+            )
+          })}
+        </div>
       }
     </div>
   )
