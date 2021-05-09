@@ -7,21 +7,25 @@ export const volunteeringPreset = [
   {
     imgSource: TheCollabLab,
     title: 'The Collab Lab',
-    description: 'Test'
+    date: 'collabLabDate',
+    description: 'collabLabDesc'
   },
   {
     imgSource: BeeSoftLabs,
     title: 'BeeSoft Labs',
-    description: 'Test'
+    date: 'beeSoftDate',
+    description: 'beeSoftDesc'
   },
   {
     imgSource: SheCodesAngular,
     title: 'She Codes Angular',
-    description: 'Test'
+    date: 'sheCodesDate',
+    description: 'sheCodesDesc'
   },
   {
     imgSource: GlobalStarUpWomen,
     title: 'Global Startup Weekend Women',
-    description: 'Test'
+    date: 'globalStartDate',
+    description: 'globalStartDesc'
   }
 ]

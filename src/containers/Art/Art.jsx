@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/themes/splide-default.min.css'
-// import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import styles from './Art.module.scss'
 import { Loader } from '../../components/Loader'
@@ -37,9 +36,14 @@ const useWindowSize = () => {
 const Art = () => {
   const { t } = useTranslation()
   const size = useWindowSize()
+  const initialOptions = {
+    rewind : true,
+    perPage: 3,
+    perMove: 1,
+    gap: '1rem',
+  }
   const [loaderVisibility, setLoaderVisibility] = useState(true)
-
-  console.log(size)
+  const [splideOptions, setSplideOptions] = useState(initialOptions)
 
   useEffect(() => {
     /* eslint-disable */
@@ -48,55 +52,36 @@ const Art = () => {
     }, 1000)
   }, [])
 
+  useEffect(() => {
+    setSplideOptions({
+      ...initialOptions,
+      perPage: size.width > 750 ? 3 : 1
+    })
+  }, [size.width])
+
   return (
     <div className={styles.artContainer}>
       <h1>{t('artTitle')}</h1>
       <p>{t('artDescription')}</p>
-      <div className={styles.carouselContainer}>
-        <Splide
-          options={ {
-            rewind : true,
-            perPage: 3,
-            perMove: 1,
-            gap    : '1rem',
-          } }
-          className={styles.carousel}
-        >
-          {artPreset.map((img, index) => {
-              return (
-                <SplideSlide key={index}>
-                  <img className={styles.carouselImg} src={img.source} alt={img.caption}/>
-                </SplideSlide>
-            )
-          })}
-        </Splide>
-      </div>
-      {/* {loaderVisibility ? (
+      {loaderVisibility ? 
         <Loader type='Puff' color='#FFF' />
-      ) : (
-        <div className={styles.carouselContainer}>
-          <Splide
-            options={ {
-              type   : 'loop',
-              perPage: size > 650 ? 3 : 2,
-              perMove: 1,
-              gap    : '1rem',
-              focus: 'center',
-              height: size > 650 ? 'auto' : '100%',
-              fixedWidth: '80%'
-            } }
-            className={styles.carousel}
-          >
-            {artPreset.map((img, index) => {
-                return (
-                  <SplideSlide key={index}>
-                    <img className={styles.carouselImg} src={img.source} alt={img.caption}/>
-                  </SplideSlide>
-              )
-            })}
-          </Splide>
-        </div>
-      )} */}
+        : (
+            <div className={styles.carouselContainer}>
+              <Splide
+                options={splideOptions}
+                className={styles.carousel}
+              >
+                {artPreset.map((img, index) => {
+                    return (
+                      <SplideSlide key={index}>
+                        <img className={styles.carouselImg} src={img.source} alt={img.caption}/>
+                      </SplideSlide>
+                  )
+                })}
+              </Splide>
+            </div>
+         )
+      }
     </div>
   )
 }

@@ -19,7 +19,8 @@ const Volunteering = () => {
               <CustomCard
                 imgSource={item.imgSource}
                 title={item.title}
-                description={item.description}
+                description={t(item.description)}
+                date={t(item.date)}
               />
               <div className={styles.verticalLine}></div>
             </>

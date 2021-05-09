@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+import './App.css'
 import { Art } from './containers/Art'
 import { Talks } from './containers/Talks'
 import { Header } from './components/Header'
@@ -8,7 +9,6 @@ import { Skills } from './containers/Skills'
 import { Footer } from './components/Footer'
 import { MainPage } from './containers/MainPage'
 import { Volunteering } from './containers/Volunteering'
-import './App.css'
 
 function App() {
   return (
@@ -33,8 +33,8 @@ function App() {
               <Volunteering />
             </Route>
           </Switch>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   )

@@ -1,9 +1,9 @@
-import html from '../assets/images/html.png'
 import css from '../assets/images/css.png'
-import javascript from '../assets/images/javascript.png'
-import react from '../assets/images/react.png'
-import reactNative from '../assets/images/reactNative.png'
 import git from '../assets/images/git.png'
+import html from '../assets/images/html.png'
+import react from '../assets/images/react.png'
+import javascript from '../assets/images/javascript.png'
+import reactNative from '../assets/images/reactNative.png'
 import accessibility from '../assets/images/accessibility.png'
 
 export const skillsPreset = [

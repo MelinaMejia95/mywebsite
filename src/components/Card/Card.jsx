@@ -5,15 +5,15 @@ import './Card.scss'
 export const CustomCard = ({
   imgSource,
   title,
-  description
+  description,
+  date
 }) => {
   return (
     <div className='custom-card-container'>
-      <div className='image-container'>
-        <img src={imgSource} alt={title}/>
-      </div>
+      <img src={imgSource} alt={title}/>
       <div className='description-container'>
         <label className='title'>{title}</label>
+        <label className='date'>{date}</label>
         <label className='description'>{description}</label>
       </div>
     </div>

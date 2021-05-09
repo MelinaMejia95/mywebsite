@@ -25,12 +25,13 @@ h1, h2, h3, p {
   .desktopContainer {
     border: 1px solid white;
     border-radius: 3rem;
-    display: grid;
-    grid-template-rows: 5rem auto;
+    display: block;
     width: 100%;
   }
 
   .mainContent {
-    min-height: auto;
+    display: flex;
+    justify-content: center;
+    min-height: 80%;
   }
 }

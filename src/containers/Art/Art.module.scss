@@ -22,14 +22,14 @@
     padding: 0 1.5rem;
   }
 
-/*   .carouselContainer {
+  .carouselContainer {
     margin-top: 1rem;
 
     .carouselImg {
       width: 100%;
       height: 100%;
     }
-  } */
+  }
 }
 
 @media (min-width: 650px){
@@ -39,8 +39,9 @@
 
     .carouselContainer {
       height: 100%;
-      max-width: 1000px;
+      width: 90%;
       align-self: center;
+      margin-bottom: 1rem;
 
       .carousel {
         height: 100%;

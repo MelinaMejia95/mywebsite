@@ -1,6 +1,9 @@
 @import '../../scss/variables';
 
 .volunteeringContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: black;
   padding-bottom: 3rem;
   padding-top: 6rem;
@@ -28,6 +31,16 @@
     .verticalLine:not(:last-child) {
       height: 80px;
       border: 2px solid white;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .volunteeringContainer {
+    padding-top: 0;
+
+    .cardsContainer {
+      width: 70%;
     }
   }
 }
