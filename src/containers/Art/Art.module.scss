@@ -4,7 +4,6 @@
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  background-color: black;
   padding-bottom: 3rem;
   padding-top: 6rem;
 
@@ -23,7 +22,34 @@
     padding: 0 1.5rem;
   }
 
-  .carouselContainer {
+/*   .carouselContainer {
     margin-top: 1rem;
+
+    .carouselImg {
+      width: 100%;
+      height: 100%;
+    }
+  } */
+}
+
+@media (min-width: 650px){
+  .artContainer {
+    padding: 0;
+    width: 100%;
+
+    .carouselContainer {
+      height: 100%;
+      max-width: 1000px;
+      align-self: center;
+
+      .carousel {
+        height: 100%;
+
+        .carouselImg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 }
